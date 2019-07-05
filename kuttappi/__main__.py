@@ -141,6 +141,12 @@ def send_start(bot, update):
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name 
     text = PM_START
+    
+    keyboard = [[InlineKeyboardButton(text="ðŸ“¢ Support Group", url="https://t.me/KeralasBots")]]
+    keyboard += [[InlineKeyboardButton(text="ðŸ›  Control panel", callback_data="cntrl_panel_M")]]
+    keyboard += [[InlineKeyboardButton(text="ðŸ‡ºðŸ‡¸ Language", callback_data="set_lang_"), 
+        InlineKeyboardButton(text="â” Help", callback_data="help_back")]]
+
 
     update.effective_message.reply_text(PM_START.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=False, parse_mode=ParseMode.MARKDOWN)
 
