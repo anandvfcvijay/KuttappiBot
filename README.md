@@ -1,4 +1,4 @@
-# Haruka
+# Kuttappi
 A modular Telegram Python bot running on python3 with an sqlalchemy database.
 
 Can be found on telegram as [Haruka Aya](https://t.me/HarukaAyaBot).
